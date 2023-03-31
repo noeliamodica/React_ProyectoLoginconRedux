@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import Axios from 'axios';
-import { setUser } from '../reducers/user/userSlice';
+
 
 export const Index = () =>{
 
@@ -20,15 +20,16 @@ export const Index = () =>{
             //busco los usuarios que quiero
             const userToLog = users.find(user => user.email === emailField.current.value);
 
-    
+            console.log(users)
+
             if (userToLog) {
               if (userToLog.password === passwordField.current.value) {
                console.log("Credenciales válidas");
-                dispatch(setUser({
-                  email: userToLog.email,
-                  fullName: `${userToLog.first_name} ${userToLog.last_name}`,
-                 token: Date.now(),
-                }))
+             //   dispatch(setUser({
+               //   email: userToLog.email,
+                 // fullName: `${userToLog.first_name} ${userToLog.last_name}`,
+                 //token: Date.now(),
+                //}))
                 //navigate("/home");
               }
             }

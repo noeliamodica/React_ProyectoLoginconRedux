@@ -1,4 +1,5 @@
 import { Index } from "./pages/Index"
+import { Routes, Route, Link } from 'react-router-dom';
 
 export const  App =() => {
   
@@ -6,7 +7,10 @@ export const  App =() => {
   return (
    
       <div>
-      <Index />
+         <Routes>
+        <Route path="/" element={<Index />} />
+     
+      </Routes>
     </div>
   )
 }
