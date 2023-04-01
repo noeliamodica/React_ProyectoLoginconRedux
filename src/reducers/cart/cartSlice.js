@@ -14,8 +14,10 @@ export const cartSlice = createSlice({
         state.totalCount += 1;
     },
     removeProductFromCart: (state, action) => {
+      //en el payload me pasan en id y se lo resto al estado
       const productId = action.payload;
       state.totalCount -= 1;
+      //filtro el estado devolviendo todos menos el que tiene el id identificado
       state.productsList = state.productsList.filter(product => product.id !== productId);
     },
    },
