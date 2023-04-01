@@ -17,9 +17,8 @@ export const Cart = () => {
         <thead>
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Price</th>
-            <th scope="col">Category</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
             <th scope="col">Actions</th>
           </tr>
         </thead>
@@ -28,9 +27,8 @@ export const Cart = () => {
             return (
               <tr key={product.id}>
                 <th scope="row">{product.id}</th>
-                <td scope="row">{product.name}</td>
-                <td scope="row">{product.price}</td>
-                <td scope="row">{product.category}</td>
+                <td scope="row">{product.nombre}</td>
+                <td scope="row">{product.precio}</td>
                 <td scope="row"><button className="btn btn-danger" onClick={() => handleRemoveProduct(product.id)}>Delete</button></td>
               </tr>
             )
